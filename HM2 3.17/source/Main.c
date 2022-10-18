@@ -5,8 +5,6 @@ float a, b, c, d;
 int x;
 int main(void)
 {	
-
-	
 	while(1)
     {
 		printf("Enter account unmber (-1 to end): "); scanf_s("%d", &x);
@@ -19,9 +17,8 @@ int main(void)
 		printf("Credit limit: %0.2f\n", d);
 		printf("Blance: %0.2f\n", (a + b - c));
 		if (((a + b - c) > d))
-			printf("Credit Limit Exceeded\n");
+			printf("Credit Limit Exceeded\n\n");
     }
 	system("pause");
-	
 	return 0;
 }
