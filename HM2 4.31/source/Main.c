@@ -4,32 +4,34 @@
 
 int main()
 {
-	int n, c, k;
-
-	printf("Enter number of rows\n");
-	scanf("%d", &n);
-
-	for (k = 1; k <= n; k++)
+	int x, y, z;
+	printf("輸入菱形層數(只有奇數層)");
+	scanf("%d", &z);
+	z--;
+	z = (z / 2) + 1;
+	for (y = 1; y <= z; y++)
 	{
-		for (c = 1; c <= n - k; c++)
+		for (x = 1; x <= z - y; x++)
+		{
 			printf(" ");
-
-		for (c = 1; c <= 2 * k - 1; c++)
+		}
+		for (x = 1; x <= 2 * y - 1; x++)
+		{
 			printf("*");
-
+		}
 		printf("\n");
 	}
-
-	for (k = 1; k <= n - 1; k++)
+	for (y = 1; y <= z-1; y++)
 	{
-		for (c = 1; c <= k; c++)
+		for (x = 1; x <= y; x++)
+		{
 			printf(" ");
-
-		for (c = 1; c <= 2 * (n - k) - 1; c++)
+		}
+		for (x = 1; x <= 2 * (z - y) - 1; x++)
+		{
 			printf("*");
-
+		}		
 		printf("\n");
 	}
-
 	return 0;
 }
